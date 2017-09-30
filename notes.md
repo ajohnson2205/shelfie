@@ -15,3 +15,6 @@ Creating the shelfie project.
       A - 'touch index.js' to create index.js
 
 <h1>index.js</h1>
+Create the server
+  Require express and body-parser
+  
