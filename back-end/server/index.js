@@ -11,7 +11,15 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => app.set('db', dbInstan
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/api/everything', controller.getAllItems)
+
+app.get('/api/shelf/:id', controller.getShelf);
+app.get('/api/bin/:id', controller.getBin);
+// app.put('/api/bin/:id', controller.updateBin);
+// app.delete('/api/bin/:id', controller.deleteBin);
+app.post('/api/bin/:id', controller.createBin);
+
+
+
 
 const port = process.env.PORT || 1337
 app.listen(port, () => {console.log(`Server is listening on port ${port}...`)})
