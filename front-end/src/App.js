@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios'
+
+
 import Body from './components/body.js'
+import Header from './components/header.js'
+import Bins from './components/bins.js'
+
 
 const url = 'http://localhost:1337/api/shelf/A'
 
@@ -42,7 +47,9 @@ class App extends Component {
 
     return (
       <div>
+        <Header />
         <Body />
+        <Bins />
       </div>
     );
   }
