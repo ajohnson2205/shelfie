@@ -3,12 +3,13 @@ import './App.css';
 import axios from 'axios'
 
 
+import router from './router.js'
 import Body from './components/body.js'
 import Header from './components/header.js'
-import Bins from './components/bins.js'
 
 
-const url = 'http://localhost:1337/api/shelf/A'
+
+const url = 'http://localhost:1337/api/shelf/B'
 
 class App extends Component {
   constructor() {
@@ -48,8 +49,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Body />
-        <Bins />
+        {router}
       </div>
     );
   }

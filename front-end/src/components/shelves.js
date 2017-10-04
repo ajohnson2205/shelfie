@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 const url = 'http://localhost:1337/api'
 
 
 
-
-class Bins extends Component {
+class Shelves extends Component {
   constructor() {
     super()
 
@@ -35,10 +35,16 @@ class Bins extends Component {
   render() {
     return(
       <div>
-        <h1>Here is the bin item!</h1>
+        {this.state.returnedResponse.map((item) => {
+          return(
+            <Link to={`/bin/${item.shelfid}/${item.binid}`}>
+              <h1>{item.itemname}</h1>
+            </Link>
+          )
+        })}
       </div>
     )
   }
 }
 
-export default Bins;
+export default Shelves;

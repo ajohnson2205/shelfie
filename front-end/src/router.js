@@ -1,11 +1,15 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 
-import Body from './components/Body';
+import Body from './components/body.js';
+import Shelves from './components/shelves.js'
+import Bins from './components/bins.js'
 
 
 export default (
-  <switch>
+  <Switch>
     <Route component={Body} exact path="/" />
-  </switch>
+    <Route component={Shelves} path="/shelf" />
+    <Route component={Bins} path='/shelf/bin/' />
+  </Switch>
 )

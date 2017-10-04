@@ -1,10 +1,19 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+// import logo from "../assets/shelfie-logo.png"
+
+import '../App.css';
 
 class Header extends Component {
 
   render() {
     return(
-      <h1>This is the header</h1>
+      <div className='header'>
+        <Link to="/">
+          <img src="shelfie-logo.png" />
+          <h1>This is the header</h1>
+        </Link>
+      </div>
     )
   }
 }

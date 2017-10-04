@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-app.get('/api/shelf/:id', controller.getShelf);
+app.get('/api/bin/:id', controller.getShelf);
 app.get('/api/bin/:id', controller.getBin);
 // app.put('/api/bin/:id', controller.updateBin);
 // app.delete('/api/bin/:id', controller.deleteBin);

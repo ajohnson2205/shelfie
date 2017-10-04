@@ -5,7 +5,7 @@ module.exports = {
     console.log("Getting shelf");
     const dbInstance = req.app.get('db');
 
-    dbInstance.get_shelf({binid: req.params.id + '%'})
+    dbInstance.get_shelf({shelfid: req.params.id})
       .then((bin) => res.status(200).send(bin))
 
   },

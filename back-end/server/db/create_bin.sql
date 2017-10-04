@@ -1,2 +1,2 @@
-INSERT INTO appData (binid, itemname, itemprice)
-VALUES (${binid}, ${itemname}, ${itemprice});
+INSERT INTO appData (binid, itemname, itemprice, shelfid)
+VALUES (${binid}, ${itemname}, ${itemprice}, ${shelfid});

@@ -1,1 +1,1 @@
-SELECT * FROM appData WHERE BinID LIKE ${binid} ORDER BY binid;
+SELECT * FROM appData WHERE shelfid LIKE ${shelfid} ORDER BY shelfid;
